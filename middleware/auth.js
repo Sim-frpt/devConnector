@@ -17,5 +17,4 @@ module.exports = function(req, res, next){
   } catch(err){
     res.status(401).json({ msg: "token is not valid"});
   }
-
 };

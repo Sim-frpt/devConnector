@@ -6,9 +6,11 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { check, validationResult } = require("express-validator/check");
 const config = require('config');
+
 // @route   POST api/users
 // @desc    Register user
 // @access  Public
+
 router.post('/', [
   check('name', 'Name is required').not().isEmpty(),
   check('email', "Please include a valid email").isEmail(),
@@ -55,10 +57,7 @@ router.post('/', [
     }
 
     jwt.sign(
-      payload,
-      config.get('jwtSecret'),
-      { expiresIn: 360000},
-      (err, token) => {
+      payload, config.get('jwtSecret'), { expiresIn: 360000}, (err, token) => {
         if (err) throw err;
         res.json({ token });
       }
