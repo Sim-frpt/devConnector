@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://simon_f:simon@firstclouddb-rnmhy.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "gitHubClientID": "d676c15f921b2cff9c30",
+  "gitHubClientSecret": "82425722e93ba19e0d2fa142181272e5cdc3f1d1"
 }
